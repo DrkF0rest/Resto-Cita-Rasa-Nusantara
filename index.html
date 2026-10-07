@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
+    <header class="hero">
       <div class="navigasi">
         <a href="#menu">Lihat Menu</a>
+        <a href="#pemesanan">Pesan</a>
         <a href="#alamat">Alamat</a>
         <a href="#kontak">Kontak</a>
       </div>
       <h1>Cita Rasa Nusantara</h1>
       <p>Hidangan Indonesia autentik, dibuat dari bahan pilihan dan resep turun-temurun.</p>
       <p>Buka setiap hari, pukul 10.00 sampai 22.00 WIB.</p>
-    </div>
+    </header>
 
     <hr />
     <video controls preload="metadata">
@@ -95,6 +96,150 @@
           <td>Rp 13.000</td>
         </tr>
       </table>
+    </div>
+
+    <hr />
+
+    <div id="pemesanan">
+      <h2>Formulir Pemesanan</h2>
+      <p>Lengkapi data diri dan pilih hidangan yang ingin dipesan.</p>
+
+      <form action="#" method="post">
+        <fieldset class="data-pemesan">
+          <legend>Data Pemesan</legend>
+          <div class="form-field">
+            <label for="nama-lengkap">Nama lengkap</label>
+            <input id="nama-lengkap" name="nama_lengkap" type="text" autocomplete="name" required />
+          </div>
+          <div class="form-field">
+            <label for="no-hp">No. HP</label>
+            <input id="no-hp" name="no_hp" type="tel" autocomplete="tel" required />
+          </div>
+          <div class="form-field">
+            <label for="tanggal-booking">Tanggal booking</label>
+            <input id="tanggal-booking" name="tanggal_booking" type="date" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pilih Paket Menu</legend>
+          <p class="form-hint">Centang item yang dipesan, lalu masukkan jumlahnya.</p>
+
+          <h3>Makanan</h3>
+          <div class="menu-pesanan">
+            <div class="menu-pilihan">
+              <label for="menu-nasi-goreng"><input id="menu-nasi-goreng" name="paket[]" type="checkbox" value="Nasi Goreng Spesial" /> Nasi Goreng Spesial</label>
+              <label for="jumlah-nasi-goreng">Jumlah</label>
+              <input id="jumlah-nasi-goreng" name="jumlah_nasi_goreng" type="number" min="1" value="1" />
+            </div>
+            <div class="menu-pilihan">
+              <label for="menu-rendang"><input id="menu-rendang" name="paket[]" type="checkbox" value="Rendang Daging Sapi" /> Rendang Daging Sapi</label>
+              <label for="jumlah-rendang">Jumlah</label>
+              <input id="jumlah-rendang" name="jumlah_rendang" type="number" min="1" value="1" />
+            </div>
+            <div class="menu-pilihan">
+              <label for="menu-ayam-bakar"><input id="menu-ayam-bakar" name="paket[]" type="checkbox" value="Ayam Bakar Bumbu Rujak" /> Ayam Bakar Bumbu Rujak</label>
+              <label for="jumlah-ayam-bakar">Jumlah</label>
+              <input id="jumlah-ayam-bakar" name="jumlah_ayam_bakar" type="number" min="1" value="1" />
+            </div>
+            <div class="menu-pilihan">
+              <label for="menu-sate"><input id="menu-sate" name="paket[]" type="checkbox" value="Sate Ayam" /> Sate Ayam</label>
+              <label for="jumlah-sate">Jumlah</label>
+              <input id="jumlah-sate" name="jumlah_sate" type="number" min="1" value="1" />
+            </div>
+            <div class="menu-pilihan">
+              <label for="menu-gado-gado"><input id="menu-gado-gado" name="paket[]" type="checkbox" value="Gado-Gado Betawi" /> Gado-Gado Betawi</label>
+              <label for="jumlah-gado-gado">Jumlah</label>
+              <input id="jumlah-gado-gado" name="jumlah_gado_gado" type="number" min="1" value="1" />
+            </div>
+          </div>
+
+          <h3>Minuman</h3>
+          <div class="menu-pesanan">
+            <div class="menu-pilihan">
+              <label for="menu-es-teh"><input id="menu-es-teh" name="paket[]" type="checkbox" value="Es Teh Manis" /> Es Teh Manis</label>
+              <label for="jumlah-es-teh">Jumlah</label>
+              <input id="jumlah-es-teh" name="jumlah_es_teh" type="number" min="1" value="1" />
+            </div>
+            <div class="menu-pilihan">
+              <label for="menu-es-jeruk"><input id="menu-es-jeruk" name="paket[]" type="checkbox" value="Es Jeruk Peras" /> Es Jeruk Peras</label>
+              <label for="jumlah-es-jeruk">Jumlah</label>
+              <input id="jumlah-es-jeruk" name="jumlah_es_jeruk" type="number" min="1" value="1" />
+            </div>
+            <div class="menu-pilihan">
+              <label for="menu-jus-alpukat"><input id="menu-jus-alpukat" name="paket[]" type="checkbox" value="Jus Alpukat" /> Jus Alpukat</label>
+              <label for="jumlah-jus-alpukat">Jumlah</label>
+              <input id="jumlah-jus-alpukat" name="jumlah_jus_alpukat" type="number" min="1" value="1" />
+            </div>
+            <div class="menu-pilihan">
+              <label for="menu-kopi"><input id="menu-kopi" name="paket[]" type="checkbox" value="Kopi Tubruk" /> Kopi Tubruk</label>
+              <label for="jumlah-kopi">Jumlah</label>
+              <input id="jumlah-kopi" name="jumlah_kopi" type="number" min="1" value="1" />
+            </div>
+            <div class="menu-pilihan">
+              <label for="menu-cendol"><input id="menu-cendol" name="paket[]" type="checkbox" value="Es Cendol" /> Es Cendol</label>
+              <label for="jumlah-cendol">Jumlah</label>
+              <input id="jumlah-cendol" name="jumlah_cendol" type="number" min="1" value="1" />
+            </div>
+          </div>
+
+          <h3>Dessert</h3>
+          <div class="menu-pesanan">
+            <div class="menu-pilihan">
+              <label for="menu-klepon"><input id="menu-klepon" name="paket[]" type="checkbox" value="Klepon" /> Klepon</label>
+              <label for="jumlah-klepon">Jumlah</label>
+              <input id="jumlah-klepon" name="jumlah_klepon" type="number" min="1" value="1" />
+            </div>
+            <div class="menu-pilihan">
+              <label for="menu-pisang-goreng"><input id="menu-pisang-goreng" name="paket[]" type="checkbox" value="Pisang Goreng" /> Pisang Goreng</label>
+              <label for="jumlah-pisang-goreng">Jumlah</label>
+              <input id="jumlah-pisang-goreng" name="jumlah_pisang_goreng" type="number" min="1" value="1" />
+            </div>
+            <div class="menu-pilihan">
+              <label for="menu-kue-lumpur"><input id="menu-kue-lumpur" name="paket[]" type="checkbox" value="Kue Lumpur" /> Kue Lumpur</label>
+              <label for="jumlah-kue-lumpur">Jumlah</label>
+              <input id="jumlah-kue-lumpur" name="jumlah_kue_lumpur" type="number" min="1" value="1" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pilihan Pembayaran</legend>
+          <p class="form-hint">Pilih satu metode pembayaran. Masukkan nomor kartu jika memilih Visa atau Mastercard.</p>
+          <div class="metode-pembayaran">
+            <label class="metode-pilihan" for="bayar-visa">
+              <input id="bayar-visa" name="metode_pembayaran" type="radio" value="Visa" required />
+              <span class="logo-pembayaran logo-visa" aria-label="Visa">VISA</span>
+            </label>
+            <label class="metode-pilihan" for="bayar-mastercard">
+              <input id="bayar-mastercard" name="metode_pembayaran" type="radio" value="Mastercard" />
+              <span class="logo-pembayaran logo-mastercard" aria-label="Mastercard"><span></span><span></span>Mastercard</span>
+            </label>
+            <label class="metode-pilihan" for="bayar-gopay">
+              <input id="bayar-gopay" name="metode_pembayaran" type="radio" value="GoPay" />
+              <span class="logo-pembayaran logo-gopay" aria-label="GoPay">GoPay</span>
+            </label>
+            <label class="metode-pilihan" for="bayar-ovo">
+              <input id="bayar-ovo" name="metode_pembayaran" type="radio" value="OVO" />
+              <span class="logo-pembayaran logo-ovo" aria-label="OVO">OVO</span>
+            </label>
+            <label class="metode-pilihan" for="bayar-dana">
+              <input id="bayar-dana" name="metode_pembayaran" type="radio" value="DANA" />
+              <span class="logo-pembayaran logo-dana" aria-label="DANA">DANA</span>
+            </label>
+            <label class="metode-pilihan" for="bayar-shopeepay">
+              <input id="bayar-shopeepay" name="metode_pembayaran" type="radio" value="ShopeePay" />
+              <span class="logo-pembayaran logo-shopeepay" aria-label="ShopeePay">ShopeePay</span>
+            </label>
+          </div>
+          <div class="form-field">
+            <label for="nomor-kartu">Nomor kartu debit/kredit</label>
+            <input id="nomor-kartu" name="nomor_kartu" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="Isi jika memilih Visa/Mastercard" />
+          </div>
+        </fieldset>
+
+        <button type="submit">Kirim Pesanan</button>
+      </form>
     </div>
 
     <hr />
